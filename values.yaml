@@ -41,7 +41,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: helmtechlab-errorchart-<namespace>.phoenix.mobicorp.ch
+    - host: errorchart-<namespace>.kubedev.mobicorp.test
       paths:
         - /
 
