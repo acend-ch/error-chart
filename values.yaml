@@ -41,7 +41,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: errorchart-<namespace>.<appdomain>
+    - host: errorchart-user00.labapp.acend.ch
       paths:
         - /
 
