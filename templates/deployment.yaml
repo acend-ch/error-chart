@@ -8,8 +8,8 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-    app.kubernetes.io/name: {{ include "error-chart.name" . }}
-    app.kubernetes.io/instance: {{ .Release.Name }}
+      app.kubernetes.io/name: {{ include "error-chart.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
@@ -27,7 +27,7 @@ spec:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tags }}"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
